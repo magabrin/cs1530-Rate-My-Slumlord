@@ -22,9 +22,11 @@
     <title>React App</title>
   </head>
   <body>
-    <p>Inside index.html</p>
-    <p>Get your greeting <a href="/greeting">here</a></p>
+    <!-- <p>Inside index.html</p>
+    <p>Get your greeting <a href="/greeting">here</a></p> -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id='page' th:text="${page}"></div>
+    <p th:text="'Page, ' + ${page} + '!'"></p>
     <div id="root"></div>
     <script src="main.js"></script>
   </body>
