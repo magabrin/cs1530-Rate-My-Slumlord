@@ -1,4 +1,5 @@
 import React from 'react';
+// import Login from 'Login';
 
 class Home extends React.Component {
     constructor(props) {
@@ -8,7 +9,10 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                Home
+                <div>
+                    Home
+                </div>
+                <Login></Login>
             </div>
         )
     }

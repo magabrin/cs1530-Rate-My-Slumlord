@@ -9,6 +9,14 @@ import Ratings from './components/Ratings';
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: undefined
+    }
+  }
+
+
   render() {
     return (
       <div className="App">
