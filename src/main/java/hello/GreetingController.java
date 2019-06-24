@@ -22,6 +22,27 @@ public class GreetingController {
         return "index"; 
     }
 
+    @GetMapping("/wiki")
+    public String wiki(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("page", "wiki");
+        return "index"; 
+    }
+
+    @GetMapping("/properties")
+    public String properties(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("page", "properties");
+        return "index"; 
+    }
+
+    @GetMapping("/ratings")
+    public String ratings(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("page", "ratings");
+        return "index"; 
+    }
+
     @GetMapping("/matt")
     public String mattfunction(Model model) {
         return "matt";
