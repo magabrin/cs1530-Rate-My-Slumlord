@@ -43,6 +43,13 @@ public class GreetingController {
         return "index"; 
     }
 
+    @GetMapping("/createReview")
+    public String createReview(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("page", "createReview");
+        return "index"; 
+    }
+
     @GetMapping("/matt")
     public String mattfunction(Model model) {
         return "matt";

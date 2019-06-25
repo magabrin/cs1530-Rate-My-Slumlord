@@ -6,6 +6,7 @@ import Greeting from './components/Greeting';
 import Wiki from './components/Wiki';
 import Properties from './components/Properties';
 import Ratings from './components/Ratings'; 
+import CreateReview from './components/CreateReview';
 
 class App extends React.Component {
 
@@ -35,6 +36,7 @@ class App extends React.Component {
                 {this.props.page === 'wiki' ? <Wiki></Wiki> : <div></div>}
                 {this.props.page === 'properties' ? <Properties></Properties> : <div></div>}
                 {this.props.page === 'ratings' ? <Ratings></Ratings> : <div></div>}
+                {this.props.page === 'createReview' ? <CreateReview></CreateReview> : <div></div>}
               </div>
             </div>           
             

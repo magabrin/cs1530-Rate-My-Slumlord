@@ -25,6 +25,11 @@ class Home extends React.Component {
                     <h1>Welcome to Rate My Slumlord</h1>
                     <p>Insert slogan here</p>
                 </div>
+
+                <a className="btn btn-primary btn-lg" href="/createReview">
+                    Create Review
+                </a>
+
                 <h3>Top Landlords</h3>
                 {this.state.topLandlords === undefined ? <div>No Landlords</div> : <div>Display landlords here</div> }
                 <h3>Top Properties</h3>
