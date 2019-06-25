@@ -14,4 +14,9 @@
 	<natures>
 		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
 	</natures>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<scope>runtime</scope>
+	</dependency>
 </projectDescription>

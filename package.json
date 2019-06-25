@@ -13,7 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-test": "webpack --mode production --watch"
+    "build-test": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -15,13 +15,21 @@ class Navbar extends React.Component {
             //     <div className="col-sm"><a href="/wiki">Tenant Laws</a></div>                
             // </div>
 
-            <div className="container">
-                <div className="row"><a href='/'>Rate My Slumlord Navbar</a></div>
-                <div className="row"><a href="/greeting">Greeting</a></div>
-                <div className="row"><a href="/properties">Properties</a></div>
-                <div className="row"><a href="/ratings">Ratings</a></div>
-                <div className="row"><a href="/wiki">Tenant Laws</a></div>                
-            </div>
+            
+                <div className="btn-group-vertical">
+                    <a className="btn btn-primary" href='/'>Rate My Slumlord Navbar</a>
+                    <a className="btn btn-secondary" href="/greeting">Greeting</a>
+                    <a className="btn btn-secondary" href="/properties">Properties</a>
+                    <a className="btn btn-secondary" href="/ratings">Ratings</a>
+                    <a className="btn btn-secondary" href="/wiki">Tenant Laws</a>
+                    {/* <div className="row"><a className="btn btn-primary" href='/'>Rate My Slumlord Navbar</a></div>
+                <div className="row"><a className="button" href="/greeting">Greeting</a></div>
+                <div className="row"><a className="button" href="/properties">Properties</a></div>
+                <div className="row"><a className="button" href="/ratings">Ratings</a></div>
+                <div className="row"><a className="button" href="/wiki">Tenant Laws</a></div>                 */}
+                </div>
+                
+            
         )
     }
 }

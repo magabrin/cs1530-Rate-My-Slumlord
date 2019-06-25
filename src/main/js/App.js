@@ -26,7 +26,7 @@ class App extends React.Component {
         <body>
           <div className="container-fluid"> 
             <div className="row">
-              <div className="col-sm">
+              <div className="col-sm" style={{'max-width':'max-content'}}>
                 <Navbar></Navbar>
               </div>
               <div className="col-xl">
