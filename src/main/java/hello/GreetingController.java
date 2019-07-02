@@ -22,6 +22,12 @@ public class GreetingController {
         return "index"; 
     }
 
+    @GetMapping("/landlords")
+    public String landlords(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("page", "landlords");
+        return "index"; 
+    }
+
     @GetMapping("/wiki")
     public String wiki(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);

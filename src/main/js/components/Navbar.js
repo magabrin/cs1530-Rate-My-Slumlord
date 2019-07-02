@@ -7,29 +7,19 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            // <div className="row">
-            //     <div className="col-lg"><a href='/'>Rate My Slumlord Navbar</a></div>
-            //     <div className="col-sm"><a href="/greeting">Greeting</a></div>
-            //     <div className="col-sm"><a href="/properties">Properties</a></div>
-            //     <div className="col-sm"><a href="/ratings">Ratings</a></div>
-            //     <div className="col-sm"><a href="/wiki">Tenant Laws</a></div>                
-            // </div>
 
-            
+            <div>
+                <img className="img-thumbnail" src="ratemyslumlord.png" alt="Rate My Slumlord" style={{width:"30%", display:"block"}}></img>
                 <div className="btn-group-vertical">
                     <a className="btn btn-primary" href='/'>Rate My Slumlord Navbar</a>
                     <a className="btn btn-secondary" href="/greeting">Greeting</a>
+                    <a className="btn btn-secondary" href="/landlords">Landlords</a>
                     <a className="btn btn-secondary" href="/properties">Properties</a>
-                    <a className="btn btn-secondary" href="/ratings">Ratings</a>
+                    <a className="btn btn-secondary" href="/ratings">Ratings/Reviews</a>
                     <a className="btn btn-secondary" href="/wiki">Tenant Laws</a>
-                    {/* <div className="row"><a className="btn btn-primary" href='/'>Rate My Slumlord Navbar</a></div>
-                <div className="row"><a className="button" href="/greeting">Greeting</a></div>
-                <div className="row"><a className="button" href="/properties">Properties</a></div>
-                <div className="row"><a className="button" href="/ratings">Ratings</a></div>
-                <div className="row"><a className="button" href="/wiki">Tenant Laws</a></div>                 */}
                 </div>
                 
-            
+            </div>
         )
     }
 }
