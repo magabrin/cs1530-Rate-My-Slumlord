@@ -1,4 +1,5 @@
 import React from 'react';
+import CurrLLPage from './CurrLLPage';
 
 class Landlords extends React.Component {
     constructor(props) {
@@ -36,22 +37,24 @@ class Landlords extends React.Component {
 
     render() {
         let landlordPage;
-        if (this.state.currentLandlord === null) {
-            landlordPage = (<div>No Landlord selected</div>);
-        } else {
-            landlordPage = <CurrLLPage landlor={this.state.currentLandlord}></CurrLLPage>;
-        }
+        // if (this.state.currentLandlord === null) {
+        //     landlordPage = (<div>No Landlord selected</div>);
+        // } else {
+            landlordPage = <CurrLLPage landlord={this.state.currentLandlord}></CurrLLPage>;
+        //}
 
         return (
           <div>
             <h3>Landlords</h3>
             
             <form onSubmit={this.searchLandlord}>
-                <div class="form-group">
-                    <label for="landlordSearch">Landlord Search</label>
-                    <input type="text" class="form-control" id="landlordSearch" aria-describedby="landlord search" placeholder="Enter Landlord Name" />                    
+                <div className="form-inline">
+                    <div class="form-group mb-2">
+                        <label for="landlordSearch" className="sr-only">Landlord Search</label>
+                        <input type="text" class="form-control" id="landlordSearch" aria-describedby="landlord search" placeholder="Enter Landlord Name" />                    
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 
             {landlordPage}
