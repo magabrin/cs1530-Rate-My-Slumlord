@@ -9,7 +9,7 @@ class Navbar extends React.Component {
         return (
 
             <div>
-                <img className="img-thumbnail" src="ratemyslumlord.png" alt="Rate My Slumlord" style={{width:"30%", display:"block"}}></img>
+                <img className="img-thumbnail" src="ratemyslumlord.png" alt="Rate My Slumlord" style={{width:"200px", display:"block"}}></img>
                 <div className="btn-group-vertical">
                     <a className="btn btn-primary" href='/'>Rate My Slumlord Navbar</a>
                     <a className="btn btn-secondary" href="/greeting">Greeting</a>

@@ -41,7 +41,7 @@ class Landlords extends React.Component {
         //     landlordPage = (<div>No Landlord selected</div>);
         // } else {
             landlordPage = <CurrLLPage landlord={this.state.currentLandlord}></CurrLLPage>;
-        //}
+     
 
         return (
           <div>

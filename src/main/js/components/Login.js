@@ -58,19 +58,7 @@ class Login extends React.Component {
         })
     }
 
-    showFailedPasswordAlert = () => {
-        
-        setTimeout(
-            () => {
-                loginAlert = (<div></div>);
-            }, 3000
-        )
-    }
-
-    showSuccessPasswordAlert = () => {
-      
-    }
-
+ 
     componentDidMount() {
         setTimeout(
             () => {
@@ -104,7 +92,7 @@ class Login extends React.Component {
                     <input type="password" class="form-control" name="password" placeholder="Password"  onChange={this.handleChange} id="passwordID"/>
                 </div>                
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <div id="alertSpace">{this.state.loginSuccess ? <div class="alert alert-Success" role="alert"> Login Succeeded! </div> : this.state.loginSuccess!==null?<div class="alert alert-danger" role="alert"> Login Failed </div>:<div></div>}</div>
+                <div id="alertSpace">{this.state.loginSuccess ? <div class="alert alert-Success" role="alert"> Login Succeeded! :)  </div> : this.state.loginSuccess!==null?<div class="alert alert-danger" role="alert"> Login Failed  </div>:<div></div>}</div>
             </form>
           </div>
         )
