@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Ratings extends React.Component {
+class ModeratorPage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -8,10 +8,10 @@ class Ratings extends React.Component {
     render() {
         return (
           <div>
-              Ratings
+              ModeratorPage
           </div>
         )
     }
 }
 
-export default Ratings;
+export default ModeratorPage;

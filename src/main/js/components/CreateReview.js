@@ -51,12 +51,12 @@ class CreateReview extends React.Component {
                 <small></small>
 
                 <label for="dependabilityScoreInput">Dependability Score</label>
-                <small id="dependabilityRangeSmall" className="form-text text-muted">Rate from 0 to 5</small>
-                <input type="range" className="custom-range" min="0" max="5" id="dependabilityScoreInput" /> 
+                <small id="dependabilityRangeSmall" className="form-text text-muted">Rate from 1 to 5</small>
+                <input type="range" className="custom-range" min="1" max="5" id="dependabilityScoreInput" /> 
                 
                 <label for="overallRange">Overall Score</label>
-                <small id="overallRangeSmall" className="form-text text-muted">Rate from 0 to 5</small>
-                <input type="range" className="custom-range" min="0" max="5" id="overallRange" />                 
+                <small id="overallRangeSmall" className="form-text text-muted">Rate from 1 to 5</small>
+                <input type="range" className="custom-range" min="1" max="5" id="overallRange" />                 
 
                 <div className="form-group">
                     <label for="comments">Additional Comments</label>
