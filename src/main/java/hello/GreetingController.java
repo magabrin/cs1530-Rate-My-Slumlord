@@ -42,10 +42,10 @@ public class GreetingController {
         return "index"; 
     }
 
-    @GetMapping("/ratings")
-    public String ratings(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    @GetMapping("/moderatorPage")
+    public String moderatorPage(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
-        model.addAttribute("page", "ratings");
+        model.addAttribute("page", "moderatorPage");
         return "index"; 
     }
 
