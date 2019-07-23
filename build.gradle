@@ -82,6 +82,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-web") //rest
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.1.6.RELEASE'
+    //compile group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
     testCompile("junit:junit")
     testCompile('org.springframework.boot:spring-boot-starter-test') //rest
+    runtime group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
 }
