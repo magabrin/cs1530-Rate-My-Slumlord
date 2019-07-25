@@ -8,6 +8,7 @@ import Properties from './components/Properties';
 import ModeratorPage from './components/ModeratorPage'; 
 import CreateReview from './components/CreateReview';
 import Landlords from './components/Landlords';
+import LoginPage from './components/LoginPage';
 
 class App extends React.Component {
 
@@ -34,6 +35,7 @@ class App extends React.Component {
               <div className="col-xl">
                 {this.props.page === 'home' ? <Home></Home> : <div></div>}
                 {this.props.page === 'greeting' ? <Greeting></Greeting> : <div></div>}
+                {this.props.page === 'loginpage' ? <LoginPage></LoginPage> : <div></div>}
                 {this.props.page === 'wiki' ? <Wiki></Wiki> : <div></div>}
                 {this.props.page === 'properties' ? <Properties></Properties> : <div></div>}
                 {this.props.page === 'moderatorPage' ? <ModeratorPage></ModeratorPage> : <div></div>}
