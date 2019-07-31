@@ -4,7 +4,7 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userPermissions: 1
+            userPermissions: sessionStorage.getItem("permissions")
         }
     }
 

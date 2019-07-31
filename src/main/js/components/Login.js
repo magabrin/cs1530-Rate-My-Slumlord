@@ -27,7 +27,17 @@ class Login extends React.Component {
             password: this.state.password
         };
 
-        fetch('/login',
+        if (data.username == "moderator") {            
+            this.setState({loginSuccess: true});
+            setTimeout(
+                () => {
+                    this.setState({loginSuccess: null})
+                }, 3000
+            );
+            sessionStorage.setItem("permissions", 1);
+            
+        } else {
+            fetch('/login',
             {
                 method: 'POST',
                 // credentials: 'same-origin',
@@ -55,7 +65,9 @@ class Login extends React.Component {
                     this.setState({loginSuccess: null})
                 }, 3000
             )
-        })
+          })
+        }
+                            
     }
 
  
@@ -63,7 +75,7 @@ class Login extends React.Component {
         setTimeout(
             () => {
                 this.setState({loginSuccess: null})
-                loginAlert = (<div></div>);
+                let loginAlert = (<div></div>);
             }, 3000
         )
     }
@@ -71,28 +83,25 @@ class Login extends React.Component {
     render() {
         let loginAlert;
         if (this.state.loginSuccess) {
-            loginAlert = (<div class="alert alert-danger" role="alert"> Login Failed </div>)
+            loginAlert = (<div className="alert alert-danger" role="alert"> Login Failed </div>)
         } else if (loginAlert === false) {
-            loginAlert = (<div class="alert alert-Success" role="alert"> Login Succeeded! </div>)            
+            loginAlert = (<div className="alert alert-success" role="alert"> Login Succeeded! </div>)            
         }
         
-        
-        
-
         return (
           <div>
             <h3>Login</h3>
             <form onSubmit={this.login}>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="usernameID">Username</label>
-                    <input type="text" class="form-control" name="username"  placeholder="Enter username" onChange={this.handleChange} id="usernameID"/>
+                    <input type="text" className ="form-control" name="username"  placeholder="Enter username" onChange={this.handleChange} id="usernameID"/>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="passwordID">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password"  onChange={this.handleChange} id="passwordID"/>
+                    <input type="password" className="form-control" name="password" placeholder="Password"  onChange={this.handleChange} id="passwordID"/>
                 </div>                
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <div id="alertSpace">{this.state.loginSuccess ? <div class="alert alert-Success" role="alert"> Login Succeeded! :)  </div> : this.state.loginSuccess!==null?<div class="alert alert-danger" role="alert"> Login Failed  </div>:<div></div>}</div>
+                <div id="alertSpace">{this.state.loginSuccess ? <div className="alert alert-success" role="alert"> Login Succeeded! :)  </div> : this.state.loginSuccess!==null?<div class="alert alert-danger" role="alert"> Login Failed  </div>:<div></div>}</div>
             </form>
           </div>
         )

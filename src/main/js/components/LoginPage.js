@@ -7,12 +7,18 @@ class LoginPage extends React.Component {
         
     }
 
-    
+    logout = () => {
+        console.log("Logging out");
+        sessionStorage.setItem("permissions",0);
+    }
 
     render() {
         return (
           <div>
               <Login></Login>
+              <a href="/" onClick={this.logout}>
+                  Logout
+              </a>
           </div>
         )
     }
