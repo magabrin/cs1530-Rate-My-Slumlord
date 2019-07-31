@@ -32,7 +32,7 @@ public class RestGreetingController {
     @RequestMapping("/landlordSearch")
     public String landlordSearch(@RequestParam(value="name", defaultValue="") String name) {
         //jdbcTemplate.` `
-        List<Map<String,Object>> result = jdbcTemplate.queryForList("SELECT * from rms.landlord where name ilike '" + name + "'");
+        List<Map<String,Object>> result = jdbcTemplate.queryForList("SELECT * from landlord where name ilike '" + name + "'");
         String ret = "null";
 
         try{

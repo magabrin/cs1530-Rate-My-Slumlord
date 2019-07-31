@@ -1,0 +1,1 @@
+INSERT INTO users (username, password, permissions, status) VALUES ('jp', 'password', 2, true);
